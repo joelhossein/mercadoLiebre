@@ -180,6 +180,7 @@ main {
 .nombre-articulo {
   font-size: 16px;
   color: #666;
+  display: none;
 }
 
 .logo-envio {
@@ -191,6 +192,15 @@ main {
   right: 20px;
   top: -15px;
   position: absolute;
+}
+
+.logo-envio i {
+  transition: 1000ms;
+  position: relative;
+}
+
+.logo-envio i:hover {
+  transform: rotateZ(-90deg);
 }
 
 section h2 {
@@ -237,13 +247,25 @@ footer {
 /* MEDIA QUERYS */
 
 @media (min-width: 830px) {
+  .footer-icon{
+    transition: 1500ms;
+  }
+
+  .footer-icon{
+    color: #0022aa;
+  }
+
   .productos {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  .nombre-articulo {
+  .articulo .nombre-articulo{
+    transition: 2500ms;
+  }
+
+  .articulo:hover .nombre-articulo {
     display: block;
   }
 
@@ -252,13 +274,18 @@ footer {
   }
 
   .articulo {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    transition: 500ms;
     width: 35vw;
+  }
+
+  .articulo:hover {
+    box-shadow: 0px 5px 10px rgba(100, 100, 100, 0.5);
   }
 
   .bottom-navbar {
     display: block;
   }
+
 }
 
 @media (min-width: 1279px) {
