@@ -195,12 +195,8 @@ main {
 }
 
 .logo-envio i {
-  transition: 1000ms;
+  transition: 750ms;
   position: relative;
-}
-
-.logo-envio i:hover {
-  transform: rotateZ(-90deg);
 }
 
 section h2 {
@@ -267,6 +263,10 @@ footer {
 
   .articulo:hover .nombre-articulo {
     display: block;
+  }
+
+  .articulo:hover .logo-envio i {
+    transform: rotateZ(-90deg);
   }
 
   .burger-menu {
