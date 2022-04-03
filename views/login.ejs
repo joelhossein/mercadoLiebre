@@ -1,0 +1,23 @@
+<%- include('partials/head.ejs') %>
+
+<body>
+  <%- include('partials/header.ejs') %>
+
+  <main class="main-formulario">
+    <form action="/login" method="POST" class="formulario">
+      <h3>Ingresá los datos de tu cuenta</h3>
+      <input
+        type="text"
+        name="usuario"
+        id="usuario"
+        placeholder="Nombre de Usuario"
+      />
+      <input type="password" placeholder="Contraseña" name="password" />
+      <div class="button-section">
+        <button class="submit-button">Enviar</button>
+      </div>
+    </form>
+  </main>
+<%- include('partials/footer.ejs') %>
+
+</body>

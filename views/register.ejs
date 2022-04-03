@@ -1,0 +1,76 @@
+<%- include('partials/head.ejs') %>
+
+<body>
+  <%- include('partials/header.ejs') %>
+
+  <main class="main-formulario">
+    <!-- FORMULARIO REGISTRO -->
+    <form class="formulario" action="/register" method="POST">
+      <label class="label-title">Ingresá tus datos</label>
+      <!-- APELLIDO Y NOMBRE -->
+      <input type="text" name="nombre" placeholder="Nombre y apellido" />
+      <!-- NOMBRE USUARIO -->
+      <input type="text" name="usuario" placeholder="Nombre de usuario" />
+      <!-- FECHA NACIMIENTO -->
+      <label for="date" class="label-title">Fecha de nacimiento</label>
+      <input type="date" name="date" id="date" />
+      <!-- DOMICILIO -->
+      <input type="text" name="domicilio" placeholder="Domicilio" />
+
+      <!-- PERFIL USUARIO (VENDEDOR-COMPRADOR) -->
+      <label class="label-title">Perfil de Usuario</label>
+      <div class="form-section-row">
+        <label class="label-subtitle" for="comprador">Comprador</label>
+        <input type="radio" name="profile" id="comprador" />
+        <label class="label-subtitle" for="vendedor">Vendedor</label>
+        <input type="radio" name="profile" id="vendedor" />
+      </div>
+
+      <!-- INTERESES (CHECKBOX) -->
+      <label class="label-title">Intereses</label>
+      <div class="form-section-col">
+        <div>
+          <input type="checkbox" id="electro" name="categoria" />
+          <label for="electro">Electro</label>
+        </div>
+        <div>
+          <input type="checkbox" id="moda" name="categoria" />
+          <label for="moda">Moda</label>
+        </div>
+        <div>
+          <input type="checkbox" id="hogar" name="categoria" />
+          <label for="hogar">Hogar</label>
+        </div>
+        <div>
+          <input type="checkbox" id="jugueteria" name="categoria" />
+          <label for="jugueteria">Juguetería</label>
+        </div>
+        <div>
+          <input type="checkbox" id="vida-sana" name="categoria" />
+          <label for="vida-sana">Vida sana</label>
+        </div>
+      </div>
+      <!-- FOTO USUARIO -->
+      <label class="label-title" for="foto-usuario">
+        Cargá tu foto de usuario
+      </label>
+      <input type="file" name="foto-usuario" id="foto-usuario" />
+
+      <!-- PASSWORD -->
+      <label class="label-title" for="password">Contraseña</label>
+      <input type="password" name="password" id="password" />
+
+      <!-- BOTONES RESET-SUBMIT -->
+      <div class="button-section">
+        <div>
+          <button class="reset-button" type="reset">Reiniciar</button>
+        </div>
+        <div>
+          <button class="submit-button" type="submit">Registrarme</button>
+        </div>
+      </div>
+    </form>
+  </main>
+
+  <%- include('partials/footer.ejs') %>
+</body>
